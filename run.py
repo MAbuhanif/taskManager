@@ -1,3 +1,12 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import sys
+
+
+# task class to hold individual tasks
+class Task:
+    def __init__(self, description):
+        self.description = description
+        self.completed = False
+
+    def __repr__(self):
+        status = "Done" if self.completed else "Pending"
+        return f"[{status}] {self.description}"
