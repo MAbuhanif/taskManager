@@ -51,3 +51,29 @@ def display_menu():
     print("4. Remove Task")
     print("5. Exit")
 
+def main():
+    manager = TaskManager()
+
+    while True:
+        display_menu()
+        choice = input("\nChoose an option: ")
+
+        if choice == '1':
+            description = input("Enter task description: ")
+            manager.add_task(description)
+        elif choice == '2':
+            manager.view_tasks()
+        elif choice == '3':
+            task_number = int(input("Enter task number to mark as completed: "))
+            manager.mark_task_completed(task_number)
+        elif choice == '4':
+            task_number = int(input("Enter task number to remove: "))
+            manager.remove_task(task_number)
+        elif choice == '5':
+            print("Exiting...")
+            sys.exit()
+        else:
+            print("Invalid option. Please try again.")
+
+if __name__ == "__main__":
+    main()
