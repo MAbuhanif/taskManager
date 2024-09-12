@@ -42,3 +42,12 @@ class TaskManager:
             print(f"Task '{removed_task.description}' removed.")
         else:
             print("Invalid task number.")
+
+def display_menu():
+    print("\nTask Manager")
+    print("1. Add Task")
+    print("2. View Tasks")
+    print("3. Mark Task as Completed")
+    print("4. Remove Task")
+    print("5. Exit")
+
