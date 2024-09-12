@@ -21,4 +21,11 @@ class TaskManager:
         task = Task(description)
         self.tasks.append(task)
         print(f"Task '{description}' added.")
+
+    def view_tasks(self):
+        if not self.tasks:
+            print("No tasks available.")
+        else:
+            for idx, task in enumerate(self.tasks, 1):
+                print(f"{idx}. {task}")
         
