@@ -35,3 +35,10 @@ class TaskManager:
             print(f"Task {task_number} marked as completed.")
         else:
             print("Invalid task number.")
+
+    def remove_task(self, task_number):
+        if 0 < task_number <= len(self.tasks):
+            removed_task = self.tasks.pop(task_number - 1)
+            print(f"Task '{removed_task.description}' removed.")
+        else:
+            print("Invalid task number.")
