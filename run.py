@@ -29,16 +29,16 @@ class TaskManager:
             for idx, task in enumerate(self.tasks, 1):
                 print(f"{idx}. {task}")
 
-    def mark_task_completed(self, task_number):
-        if 0 < task_number <= len(self.tasks):
-            self.tasks[task_number - 1].completed = True
-            print(f"Task {task_number} marked as completed.")
+    def mark_task_completed(self, task_no):
+        if 0 < task_no <= len(self.tasks):
+            self.tasks[task_no - 1].completed = True
+            print(f"Task {task_no} marked as completed.")
         else:
             print("Invalid task number.")
 
-    def remove_task(self, task_number):
-        if 0 < task_number <= len(self.tasks):
-            removed_task = self.tasks.pop(task_number - 1)
+    def remove_task(self, task_no):
+        if 0 < task_no <= len(self.tasks):
+            removed_task = self.tasks.pop(task_no - 1)
             print(f"Task '{removed_task.description}' removed.")
         else:
             print("Invalid task number.")
@@ -64,9 +64,9 @@ def get_valid_choice():
 
 def get_valid(manager, action):
     while True:
-        task_number = input(f"Enter task number to {action}: ")
-        if task_number.isdigit() and 1 <= int(task_number) <= len(manager.tasks):
-            return int(task_number)
+        task_no = input(f"Enter task number to {action}: ")
+        if task_no.isdigit() and 1 <= int(task_no) <= len(manager.tasks):
+            return int(task_no)
         else:
             print(f"Invalid task no.valid number b/n 1 &{len(manager.tasks)}")
 
@@ -88,14 +88,14 @@ def main():
             manager.view_tasks()
         elif choice == 3:
             if manager.tasks:
-                task_number = get_valid(manager, "mark as completed")
-                manager.mark_task_completed(task_number)
+                task_no = get_valid(manager, "mark as completed")
+                manager.mark_task_completed(task_no)
             else:
                 print("No tasks available to mark as completed.")
         elif choice == 4:
             if manager.tasks:
-                task_number = get_valid(manager, "remove")
-                manager.remove_task(task_number)
+                task_no = get_valid(manager, "remove")
+                manager.remove_task(task_no)
             else:
                 print("No tasks available to remove.")
         elif choice == 5:
