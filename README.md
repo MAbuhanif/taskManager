@@ -3,6 +3,8 @@
 This is a simple command-line based task manager app written in Python. It allows you to add tasks, view tasks, mark tasks as completed, and remove tasks. The app also includes input validation to ensure proper functioning and error handling.
 > [Here is the live version of my project](https://taskm-388f9bd7b7c7.herokuapp.com/)
 
+- ![amIResponssive](assets/images/amIResponsive.png)
+
 ## Features
 
 - **Add a new task**: Allows you to add tasks with a description.
@@ -32,8 +34,26 @@ Menu Options:
 
 >The app ensures that:
    - Menu options are between 1 and 5.
+
+      >![menu](assets/images/inputvalid1.png)
    - Task descriptions are not empty.
+      > ![validation](assets/images/inputvalid2.png)
    - Task numbers are valid (i.e., within the range of available tasks).
+      > ![validation](assets/images/inputValid3.png)
+
+# Testing
+
+>I have manually tested this project by doing the following:
+
+- Passed the code through PEP8 linter and confirmed there are no problems.
+- Tested in my local terminal. 
+
+# Validator Tasting
+- PEP8
+ - No error were returned
+
+ - ![PEP8](assets/images/pep8.png)
+
 
 # Installation
 
