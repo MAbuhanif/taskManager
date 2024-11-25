@@ -1,28 +1,47 @@
 import sys
 
 
-# Task class to hold individual tasks
 class Task:
+    """
+    Represents an individual task with a description and completion status.
+    """
     def __init__(self, description):
+        """
+        Initialize a new Task instance
+        """
         self.description = description
         self.completed = False
 
     def __repr__(self):
+        """
+        Returns a string representation of task
+        """
         status = "Done" if self.completed else "Pending"
         return f"[{status}] {self.description}"
 
 
-# TaskManager class to manage the list of tasks
 class TaskManager:
+    """
+    Manages a list of tasks, providing methods to add, view, complete and remove tasks.
+    """
     def __init__(self):
+        """
+        Initializes a new Taskmanager instance with an empty task list.
+        """
         self.tasks = []
 
     def add_task(self, description):
+        """
+        Adds a new task to the list
+        """
         task = Task(description)
         self.tasks.append(task)
         print(f"Task '{description}' added.")
 
     def view_tasks(self):
+        """
+        Displays all tasks in the list with their status and position.
+        """
         if not self.tasks:
             print("No tasks available.")
         else:
@@ -30,6 +49,9 @@ class TaskManager:
                 print(f"{idx}. {task}")
 
     def mark_task_completed(self, task_no):
+        """
+        Marks a specified task as completed.
+        """
         if 0 < task_no <= len(self.tasks):
             self.tasks[task_no - 1].completed = True
             print(f"Task {task_no} marked as completed.")
@@ -37,6 +59,9 @@ class TaskManager:
             print("Invalid task number.")
 
     def remove_task(self, task_no):
+        """
+        Removes a specified task from the list.
+        """
         if 0 < task_no <= len(self.tasks):
             removed_task = self.tasks.pop(task_no - 1)
             print(f"Task '{removed_task.description}' removed.")
@@ -45,6 +70,9 @@ class TaskManager:
 
 
 def display_menu():
+    """
+    Displays the main menu option for the task manager.
+    """
     print("\nTask Manager")
     print("1. Add Task")
     print("2. View Tasks")
@@ -54,6 +82,9 @@ def display_menu():
 
 
 def get_valid_choice():
+    """
+    Prompts the user for a valid menu choice.
+    """
     while True:
         choice = input("\nChoose an option: ")
         if choice.isdigit() and 1 <= int(choice) <= 5:
@@ -63,6 +94,9 @@ def get_valid_choice():
 
 
 def get_valid(manager, action):
+    """
+    Prompts the user for a valid task number based on the current task list.
+    """
     while True:
         task_no = input(f"Enter task number to {action}: ")
         if task_no.isdigit() and 1 <= int(task_no) <= len(manager.tasks):
@@ -72,6 +106,9 @@ def get_valid(manager, action):
 
 
 def main():
+    """
+    The main function to run the task manager program.
+    """
     manager = TaskManager()
 
     while True:
