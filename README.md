@@ -25,7 +25,7 @@ Operates entirely offline without requiring additional software or accounts.
 - **Input validation**: Ensures proper inputs for task numbers and menu choices.
 - **Exit the app**: Ends the program.
 
-## Usage
+## How to Use
 
 1. Clone or download the project.
 2. Run the Python script:
@@ -41,39 +41,66 @@ Menu Options:
    - **Remove Task** - Remove a task from the list.
    - **Exit** - Exit the task manager.
 
-# Input Validation
+## Input Validation
 
->The app ensures that:
-   - Menu options are between 1 and 5.
+This app incorporates validation to enhance user experience and prevent errors.
+   ### Examples of Validation:
+   - **Menu options**: Only numbers 1-5 are accepted.
 
-      >![menu](assets/images/inputvalid1.png)
-   - Task descriptions are not empty.
-      > ![validation](assets/images/inputvalid2.png)
-   - Task numbers are valid (i.e., within the range of available tasks).
-      > ![validation](assets/images/inputValid3.png)
+      >![Menu Validation](assets/images/inputvalid1.png)
+   - **Empty Task descriptions**: Prevents adding tasks without a description.
+      > ![Task validation](assets/images/inputvalid2.png)
+   - **Task numbers**: Ensures selected tasks exist within the valid range.
+      > ![Task number validation](assets/images/inputValid3.png)
 
-# Testing
+## Testing
+### Manual Testing Results
+The following testing was performed manually:
 
->I have manually tested this project by doing the following:
-
-- Passed the code through PEP8 linter and confirmed there are no problems.
-- Tested in my local terminal. 
-
-# Validator Tasting
-- PEP8
- - No error were returned
+1. Passed the code through the **PEP8 Linter**, confirming no errors or warnings:
 
  - ![PEP8](assets/images/pep8.png)
 
+2. Tested all features in a local terminal to verify expected behavior:
+- Adding tasks with valid and invalid inputs.
+- Viewing tasks with varying numbers of entries.
+- Completing tasks and verifying status updates.
+- Deleting tasks and checking updated lists.
+
+### Testing Table
+The table below summarizes the manual testing steps and outcomes for each feature:
+
+| **Feature**            | **Input**                     | **Expected Outcome**                              | **Actual Outcome**                                |
+|-------------------------|-------------------------------|--------------------------------------------------|--------------------------------------------------|
+| Add Task               | Task description (e.g., `Buy milk`) | Task is added to the list                        | Task added successfully                          |
+| View Tasks             | -                             | Displays all tasks                               | Tasks displayed correctly                        |
+| Mark Task as Completed | Valid task number (e.g., `1`) | Marks task as completed                          | Task marked as done                              |
+| Remove Task            | Valid task number (e.g., `1`) | Deletes the task                                 | Task removed successfully                        |
+| Invalid Menu Option    | Non-numeric input (e.g., `abc`) | Displays error and prompts for valid input       | Error displayed, retry prompt shown             |
+| Invalid Task Number    | Out-of-range task number (e.g., `10` for a list of 3 tasks) | Displays error and prompts for valid task number | Error displayed, retry prompt shown             |
+
+
+## Accreditation
+This project includes ideas adapted from the following external resources:
+
+- [GeeksforGeeks Python Tutorials](https://www.geeksforgeeks.org/)
+- [Real Python Command-Line Projects](https://realpython.com/)
+
+## Future Improvements
+Planned enhancements to add complexity and utility include:
+
+- Task prioritization and deadline tracking.
+- Saving tasks to a file for persistence.
+- Advanced filtering and sorting options.
+- Integration with graphical interfaces for wider accessibility.
+
+## Purpose Visualized
+### Flowchart
+The following flowchart illustrates the app's logic:
+ > Start → Display Menu → Perform Selected Action → Return to Menu → Exit
 
 # Installation
 
-Make sure you have Python 3.x installed. 
+Ensure Python 3.x is installed. Then, download the repository, navigate to the project folder, and execute the script:
 
-Once Python is installed, download the script and run it as described above.
-
-# Future Improvements
-
-- Add task priority or deadlines.
-- Save tasks to a file for persistence.
-- Improve task filtering and sorting options.
+> python3 run.py
