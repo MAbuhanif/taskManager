@@ -46,16 +46,17 @@ Menu Options:
 This app incorporates validation to enhance user experience and prevent errors.
    ### Examples of Validation:
    - **Menu options**: Only numbers 1-5 are accepted.
+   >![Task Number](assets/images/inputVal_6.png)
    - **Empty Task descriptions**: Prevents adding tasks without a description.
+   >![Empty Task](assets/images/emptyTask.png)
    - **Task numbers**: Ensures selected tasks exist within the valid range.
+   >![Task Number](assets/images/inputvalid2.png)
 
 ## Testing
 ### Manual Testing Results
 The following testing was performed manually:
 
 1. Passed the code through the **PEP8 Linter**, confirming no errors or warnings:
-
-      ![PEP8](assets/images/pep8.png)
 
 2. Tested all features in a local terminal to verify expected behavior:
    - Adding tasks with valid and invalid inputs.

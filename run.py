@@ -22,7 +22,7 @@ class Task:
 
 class TaskManager:
     """
-    Manages a list of tasks, providing methods to add, view, complete and remove tasks.
+    Manages a list of tasks, providing methods to add, view, complete & remove.
     """
     def __init__(self):
         """
@@ -106,7 +106,8 @@ def get_valid(manager, action):
                 "Invalid task number! "
                 f"valid number is between 1 & {len(manager.tasks)}"
                 )
-                    
+
+
 def display_instructions():
     """
     Display instructions for the task manager app.
@@ -117,10 +118,10 @@ def display_instructions():
     print("- Use the menu options by entering the corresponding number.\n")
     print("Let's get started!\n")
 
+
 def main():
     """
-    The main function to run the task manager program and 
-    display instructions once before the menu
+    The main function to run the task manager program and display instructions.
     """
     manager = TaskManager()
 
