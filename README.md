@@ -83,14 +83,6 @@ This project includes ideas adapted from the following external resources:
 - [GeeksforGeeks Python Tutorials](https://www.geeksforgeeks.org/)
 - [Real Python Command-Line Projects](https://realpython.com/)
 
-## Future Improvements
-Planned enhancements to add complexity and utility include:
-
-- Task prioritization and deadline tracking.
-- Saving tasks to a file for persistence.
-- Advanced filtering and sorting options.
-- Integration with graphical interfaces for wider accessibility.
-
 ## Purpose Visualized
 ### Flowchart
 The following flowchart illustrates the app's logic:
@@ -103,6 +95,14 @@ The following flowchart illustrates the app's logic:
    ![adding a task](assets/images/addTask.png)
 #### 2. Viweing a Task
    ![Viewing a task example](assets/images/viewTask.png)
+
+## Future Improvements
+Planned enhancements to add complexity and utility include:
+
+- Task prioritization and deadline tracking.
+- Saving tasks to a file for persistence.
+- Advanced filtering and sorting options.
+- Integration with graphical interfaces for wider accessibility.
 
 # Installation
 
