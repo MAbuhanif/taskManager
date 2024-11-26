@@ -2,9 +2,9 @@
 
 This is a command-line-based task manager app written in Python. It allows users to organize and manage tasks efficiently by adding, viewing, completing, and removing tasks. The app ensures proper input validation for seamless functionality.
 
-> [live version of the project](https://taskm-388f9bd7b7c7.herokuapp.com/)
+[live version of the project](https://taskm-388f9bd7b7c7.herokuapp.com/)
 
-- ![amIResponssive](assets/images/amIResponsive.png)
+![amIResponssive](assets/images/amIResponsive.png)
 
 ## Purpose and Benefits
 
@@ -46,12 +46,8 @@ Menu Options:
 This app incorporates validation to enhance user experience and prevent errors.
    ### Examples of Validation:
    - **Menu options**: Only numbers 1-5 are accepted.
-
-      >![Menu Validation](assets/images/inputvalid1.png)
    - **Empty Task descriptions**: Prevents adding tasks without a description.
-      > ![Task validation](assets/images/inputvalid2.png)
    - **Task numbers**: Ensures selected tasks exist within the valid range.
-      > ![Task number validation](assets/images/inputValid3.png)
 
 ## Testing
 ### Manual Testing Results
@@ -59,13 +55,13 @@ The following testing was performed manually:
 
 1. Passed the code through the **PEP8 Linter**, confirming no errors or warnings:
 
- - ![PEP8](assets/images/pep8.png)
+      ![PEP8](assets/images/pep8.png)
 
 2. Tested all features in a local terminal to verify expected behavior:
-- Adding tasks with valid and invalid inputs.
-- Viewing tasks with varying numbers of entries.
-- Completing tasks and verifying status updates.
-- Deleting tasks and checking updated lists.
+   - Adding tasks with valid and invalid inputs.
+   - Viewing tasks with varying numbers of entries.
+   - Completing tasks and verifying status updates.
+   - Deleting tasks and checking updated lists.
 
 ### Testing Table
 The table below summarizes the manual testing steps and outcomes for each feature:
@@ -98,6 +94,14 @@ Planned enhancements to add complexity and utility include:
 ### Flowchart
 The following flowchart illustrates the app's logic:
  > Start → Display Menu → Perform Selected Action → Return to Menu → Exit
+
+### Screenshots
+#### 1. Menu Display
+   ![menu options](assets/images/menu.png)
+#### 2. Adding a Task
+   ![adding a task](assets/images/addTask.png)
+#### 2. Viweing a Task
+   ![Viewing a task example](assets/images/viewTask.png)
 
 # Installation
 

@@ -102,7 +102,11 @@ def get_valid(manager, action):
         if task_no.isdigit() and 1 <= int(task_no) <= len(manager.tasks):
             return int(task_no)
         else:
-            print(f"Invalid task no.valid number b/n 1 &{len(manager.tasks)}")
+            print(
+                "Invalid task number! "
+                f"valid number is between 1 & {len(manager.tasks)}"
+                )
+                    
 
 
 def main():
