@@ -107,13 +107,24 @@ def get_valid(manager, action):
                 f"valid number is between 1 & {len(manager.tasks)}"
                 )
                     
-
+def display_instructions():
+    """
+    Display instructions for the task manager app.
+    """
+    print("\nWelcome to the Task Manager App!")
+    print("Follow the instructions below to manage your tasks:")
+    print("- You can add, view, mark as completed, or remove tasks.")
+    print("- Use the menu options by entering the corresponding number.\n")
+    print("Let's get started!\n")
 
 def main():
     """
-    The main function to run the task manager program.
+    The main function to run the task manager program and 
+    display instructions once before the menu
     """
     manager = TaskManager()
+
+    display_instructions()
 
     while True:
         display_menu()
